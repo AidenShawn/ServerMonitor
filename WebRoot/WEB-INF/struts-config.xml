@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration1.3//EN"
+"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="inputForm" type="com.struts.InputActionForm" />
+		<form-bean name="matricForm" type="com.struts.MatricActionForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/input" type="com.struts.InputAction" name="inputForm"
+			scope="request">
+			<forward name="success" path="/success.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/matricserver" type="com.struts.MatricAction"
+			name="matricForm" scope="request">
+		</action>
+	</action-mappings>
+
+</struts-config>
